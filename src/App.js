@@ -12,7 +12,8 @@ import National from './Components/CategoryNews/National/National';
 import International from './Components/CategoryNews/International/International';
 import Sports from './Components/CategoryNews/Sports/Sports';
 import Login from './Components/Login/Login';
-
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute'
+import Header from './Components/Home/Header/Header';
 
 
 
@@ -29,27 +30,28 @@ function App() {
        <Router>
      
         <Switch>
-          <Route path="/admin">
-            <Admin />
-           </Route>
-           <Route path="/newsDetails">
+         
+           <PrivateRoute path="/newsDetails">
             <NewsDetails />
-           </Route>
+           </PrivateRoute>
            <Route path='/national'>
+           <Header /><br/><br/>
              <National />
              </Route>
              <Route path='/international'>
+               <Header /><br/><br/>
              <International />
              </Route>
              <Route path='/sports'>
+             <Header /><br/><br/>
              <Sports />
              </Route>
-           <Route path="/admin">
+           <PrivateRoute path="/admin">
             <Admin />
-           </Route> 
-           <Route path="/panel/:adminPanel">
+           </PrivateRoute> 
+           <PrivateRoute path="/panel/:adminPanel">
             <Admin />
-           </Route> 
+           </PrivateRoute> 
           <Route exact path="/">
           <HomePage />
           </Route>

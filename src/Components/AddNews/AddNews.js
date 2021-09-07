@@ -36,7 +36,7 @@ const AddNews = () => {
             return swal("image is uplodeing...", "please wait some seconds", "info")
         }
         
-        axios.post('http://localhost:5000/addNews', newsInfo )
+        axios.post('https://blooming-headland-99659.herokuapp.com/addNews', newsInfo )
         .then(response => response &&  alert("Successfully Added", "Your product is successfully added!", "success"))
         .then(err => console.log(err));
     

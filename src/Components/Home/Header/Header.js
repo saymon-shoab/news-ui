@@ -27,7 +27,7 @@ const Header = () => {
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ms-auto">
         <Nav.Link as={Link} className="mr-4" active style={{ fontWeight: "650" }} to="/">Home</Nav.Link>
-        <Nav.Link as={Link} className="mr-4" active style={{ fontWeight: "650" }} to="/deals">Deals</Nav.Link>
+
         <Nav.Link as={Link} className="mr-4" active style={{ fontWeight: "650" }} to="/admin">Admin</Nav.Link>
       <Nav.Link as={Link} className="mr-4" active style={{ fontWeight: "650" }} to="/login">
         {loggedInUser.email ? `${loggedInUser.name.split(' ')[0]} / Logout` : 'Login'}

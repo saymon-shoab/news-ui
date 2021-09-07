@@ -7,7 +7,7 @@ const National = () => {
     const [allNews, setAllNews] =useState([])
 
     useEffect(()=>{
-        axios.get('http://localhost:5000/news')
+        axios.get('https://blooming-headland-99659.herokuapp.com/news')
         .then(res=> {
             setAllNews(res.data)
         })

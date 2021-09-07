@@ -16,7 +16,7 @@ const AddAdmin = () => {
       
       
         const loading = toast.loading('Adding...Please wait!');
-        axios.post('http://localhost:5000/addAdmin', data)
+        axios.post('https://blooming-headland-99659.herokuapp.com/addAdmin', data)
             .then(res => {
                 toast.dismiss(loading);
                 if (res) {

@@ -11,7 +11,7 @@ const Sidebar = ({ show }) => {
     const [isAdmin,setIsAdmin]=useState(false);
   
     useEffect(()=>{
-        fetch('http://localhost:5000/isAdmin',{
+        fetch('https://blooming-headland-99659.herokuapp.com/isAdmin',{
             method: 'POST',
             headers: {'content-type':'application/json'},
             body: JSON.stringify({email: loggedInUser.email})
